@@ -29,12 +29,12 @@ Bu layihə istifadəçilərə müxtəlif kateqoriyalarda kitabları axtarmaq, ö
 - JavaScript
 - Google Books API
 
-⚠️ Qeyd
+## ⚠️ Qeyd
 Bu layihə tədris məqsədli hazırlanmışdır və təkmilləşdirilməyə açıqdır. İstənilən töhfələrə açığıq.
 
-📬 Əlaqə
+## 📬 Əlaqə
 Əgər sualınız və ya təklifiniz varsa, mənimlə əlaqə saxlaya bilərsiniz:
 
-💌 Email: sizinemail@example.com
+## 💌 Email: amileliyev762@gmail.com
 
-🌐 GitHub: github.com/istifadeci-adiniz
+## 🌐 GitHub: github.com/Amil-bayt
