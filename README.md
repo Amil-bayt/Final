@@ -26,13 +26,15 @@ Bu layihə istifadəçilərə müxtəlif kateqoriyalarda kitabları axtarmaq, ö
 
 - HTML5
 - CSS3
-- JavaScript (Vanilla)
+- JavaScript
 - Google Books API
-- LocalStorage
 
-## 📦 Qurulum və İşə Salma
+⚠️ Qeyd
+Bu layihə tədris məqsədli hazırlanmışdır və təkmilləşdirilməyə açıqdır. İstənilən töhfələrə açığıq.
 
-1. Layihəni klonlayın:
+📬 Əlaqə
+Əgər sualınız və ya təklifiniz varsa, mənimlə əlaqə saxlaya bilərsiniz:
 
-```bash
-git clone https://github.com/istifadeci-adiniz/kitab-sayti.git
+💌 Email: sizinemail@example.com
+
+🌐 GitHub: github.com/istifadeci-adiniz
