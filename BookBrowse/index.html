@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookLibrary - University Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/image copy.png">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">📚 BookLibrary</h1>
+            <nav class="nav">
+                <button class="nav-btn active" data-section="books">Books</button>
+                <button class="nav-btn" data-section="favorites">Favorites</button>
+                <button class="nav-btn" data-section="readinglist">Reading List</button>
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Search and Filter Section -->
+            <div class="search-section">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search for books...">
+                <select id="categorySelect" class="category-select">
+                    <option value="">All Categories</option>
+                    <option value="fiction">Fiction</option>
+                    <option value="science">Science</option>
+                    <option value="history">History</option>
+                    <option value="technology">Technology</option>
+                    <option value="business">Business</option>
+                    <option value="art">Art</option>
+                    <option value="biography">Biography</option>
+                    <option value="health">Health</option>
+                    <option value="travel">Travel</option>
+                    <option value="cooking">Cooking</option>
+                </select>
+                <select id="sortSelect" class="sort-select">
+                    <option value="relevance">Sort by Relevance</option>
+                    <option value="title">Sort by Title (A-Z)</option>
+                    <option value="author">Sort by Author (A-Z)</option>
+                </select>
+            </div>
+
+            <!-- Offline Indicator -->
+            <div class="offline-indicator" id="offlineIndicator" style="display: none;">
+                <div class="offline-content">
+                    <div class="offline-icon">🔴</div>
+                    <h3>You're Offline</h3>
+                    <p>Check your internet connection to search for new books</p>
+                </div>
+            </div>
+
+            <!-- Books Section -->
+            <section id="booksSection" class="section active">
+                <h2 class="section-title">Available Books</h2>
+                <div class="loading" id="loading">Loading books...</div>
+                <div class="error" id="error" style="display: none;"></div>
+                <div class="books-grid" id="booksGrid"></div>
+            </section>
+
+            <!-- Favorites Section -->
+            <section id="favoritesSection" class="section">
+                <h2 class="section-title">My Favorites</h2>
+                <div class="empty-state" id="emptyFavorites">
+                    <p>No favorite books yet. Add some books to your favorites!</p>
+                </div>
+                <div class="books-grid" id="favoritesGrid"></div>
+            </section>
+
+            <!-- Reading List Section -->
+            <section id="readinglistSection" class="section">
+                <h2 class="section-title">My Reading List</h2>
+                <div class="empty-state" id="emptyReadingList">
+                    <p>No books in your reading list yet. Add books you want to read!</p>
+                </div>
+                <div class="books-grid" id="readingListGrid"></div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Keyboard Shortcuts Help -->
+    <div class="shortcuts-help" id="shortcutsHelp" style="display: none;">
+        <div class="shortcuts-content">
+            <h3>Keyboard Shortcuts</h3>
+            <div class="shortcuts-list">
+                <div class="shortcut-item">
+                    <span class="shortcut-key">1</span>
+                    <span class="shortcut-desc">Go to Books</span>
+                </div>
+                <div class="shortcut-item">
+                    <span class="shortcut-key">2</span>
+                    <span class="shortcut-desc">Go to Favorites</span>
+                </div>
+                <div class="shortcut-item">
+                    <span class="shortcut-key">3</span>
+                    <span class="shortcut-desc">Go to Reading List</span>
+                </div>
+                <div class="shortcut-item">
+                    <span class="shortcut-key">/</span>
+                    <span class="shortcut-desc">Focus Search</span>
+                </div>
+                <div class="shortcut-item">
+                    <span class="shortcut-key">T</span>
+                    <span class="shortcut-desc">Toggle Theme</span>
+                </div>
+                <div class="shortcut-item">
+                    <span class="shortcut-key">?</span>
+                    <span class="shortcut-desc">Show/Hide Shortcuts</span>
+                </div>
+            </div>
+            <button class="shortcuts-close" onclick="toggleShortcutsHelp()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
