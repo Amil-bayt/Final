@@ -17,15 +17,15 @@ Bu layihə istifadəçilərə müxtəlif kateqoriyalarda kitabları axtarmaq, ö
 ![Ana səhifə](https://github.com/Amil-bayt/Final/blob/main/BookBrowse/images/image.png)
 
 ### Sevimli Kitablar
-![Sevimlilər](screenshots/favorites.png)
+![Sevimlilər](https://github.com/Amil-bayt/Final/blob/main/BookBrowse/images/favorites.jpg)
 
 ### Qaranlıq Tema
 ![Qaranlıq rejim](screenshots/dark-theme.png)
 
 ## 🛠️ Texnologiyalar
 
-- HTML5
-- CSS3
+- HTML
+- CSS
 - JavaScript
 - Google Books API
 
