@@ -1,10 +1,9 @@
-// Global variables
 let allBooks = [];
 let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 let readingList = JSON.parse(localStorage.getItem('readingList')) || [];
 let currentSection = 'books';
 
-// DOM elements
+// DOM
 const booksGrid = document.getElementById('booksGrid');
 const favoritesGrid = document.getElementById('favoritesGrid');
 const readingListGrid = document.getElementById('readingListGrid');
@@ -21,7 +20,6 @@ const emptyReadingList = document.getElementById('emptyReadingList');
 const offlineIndicator = document.getElementById('offlineIndicator');
 const shortcutsHelp = document.getElementById('shortcutsHelp');
 
-// Initialize the application
 document.addEventListener('DOMContentLoaded', () => {
     initializeTheme();
     setupEventListeners();
@@ -32,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     updateReadingListDisplay();
 });
 
-// Theme management
 function initializeTheme() {
     const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
@@ -52,32 +49,25 @@ function updateThemeIcon(theme) {
     themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
 }
 
-// Event listeners
 function setupEventListeners() {
-    // Theme toggle
     themeToggle.addEventListener('click', toggleTheme);
     
-    // Navigation
     navButtons.forEach(btn => {
         btn.addEventListener('click', () => switchSection(btn.dataset.section));
     });
     
-    // Search and sort
     searchInput.addEventListener('input', debounce(handleSearch, 300));
     categorySelect.addEventListener('change', handleCategoryChange);
     sortSelect.addEventListener('change', handleSort);
 }
 
-// Section switching
 function switchSection(sectionName) {
     currentSection = sectionName;
     
-    // Update nav buttons
     navButtons.forEach(btn => {
         btn.classList.toggle('active', btn.dataset.section === sectionName);
     });
     
-    // Update sections
     sections.forEach(section => {
         section.classList.toggle('active', section.id === sectionName + 'Section');
     });
@@ -89,10 +79,8 @@ function switchSection(sectionName) {
     }
 }
 
-// Keyboard Shortcuts
 function setupKeyboardShortcuts() {
     document.addEventListener('keydown', (e) => {
-        // Ignore if user is typing in an input field
         if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') {
             return;
         }
@@ -140,7 +128,6 @@ function toggleShortcutsHelp() {
     }
 }
 
-// Offline Detection
 function setupOfflineDetection() {
     function updateOnlineStatus() {
         if (!navigator.onLine) {
@@ -152,16 +139,14 @@ function setupOfflineDetection() {
 
     window.addEventListener('online', updateOnlineStatus);
     window.addEventListener('offline', updateOnlineStatus);
-    updateOnlineStatus(); // Check initial status
+    updateOnlineStatus();
 }
 
-// API functions
 async function loadBooks(query = 'programming', category = '') {
     try {
         showLoading(true);
         hideError();
         
-        // Build search query with category
         let searchQuery = query;
         if (category) {
             searchQuery = `${query} subject:${category}`;
@@ -205,7 +190,6 @@ async function loadBooks(query = 'programming', category = '') {
     }
 }
 
-// Display functions
 function displayBooks(books) {
     if (!books || books.length === 0) {
         booksGrid.innerHTML = '<div class="empty-state">No books to display.</div>';
@@ -253,7 +237,6 @@ function createBookCard(book) {
     `;
 }
 
-// Favorites management
 function toggleFavorite(bookId) {
     const book = allBooks.find(b => b.id === bookId) || 
                  favorites.find(f => f.id === bookId) ||
@@ -271,7 +254,6 @@ function toggleFavorite(bookId) {
     
     localStorage.setItem('favorites', JSON.stringify(favorites));
     
-    // Update UI
     if (currentSection === 'books') {
         displayBooks(allBooks);
     } else if (currentSection === 'favorites') {
@@ -281,7 +263,6 @@ function toggleFavorite(bookId) {
     }
 }
 
-// Reading List management
 function toggleReadingList(bookId) {
     const book = allBooks.find(b => b.id === bookId) || 
                  favorites.find(f => f.id === bookId) ||
@@ -299,7 +280,6 @@ function toggleReadingList(bookId) {
     
     localStorage.setItem('readingList', JSON.stringify(readingList));
     
-    // Update UI
     if (currentSection === 'books') {
         displayBooks(allBooks);
     } else if (currentSection === 'favorites') {
@@ -401,13 +381,12 @@ function createReadingListCard(book) {
     `;
 }
 
-// Search and sort functions
 function handleSearch() {
     const query = searchInput.value.trim();
     const category = categorySelect.value;
     
     if (query.length === 0) {
-        loadBooks('programming', category); // Load default books with category
+        loadBooks('programming', category);
     } else if (query.length >= 2) {
         loadBooks(query, category);
     }
@@ -432,7 +411,6 @@ function handleSort() {
             break;
         case 'relevance':
         default:
-            // Keep original order
             break;
     }
     
@@ -441,7 +419,6 @@ function handleSort() {
     }
 }
 
-// Utility functions
 function debounce(func, wait) {
     let timeout;
     return function executedFunction(...args) {
