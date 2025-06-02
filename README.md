@@ -20,7 +20,7 @@ Bu layihə istifadəçilərə müxtəlif kateqoriyalarda kitabları axtarmaq, ö
 ![Sevimlilər](https://github.com/Amil-bayt/Final/blob/main/BookBrowse/images/favorites.jpg)
 
 ### Klaviatura Qısayolları
-![Qaranlıq rejim](screenshots/dark-theme.png)
+![Qaranlıq rejim](https://github.com/Amil-bayt/Final/blob/main/BookBrowse/images/shortcuts.jpg)
 
 ## 🛠️ Texnologiyalar
 
