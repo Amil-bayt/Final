@@ -14,7 +14,7 @@ Bu layihə istifadəçilərə müxtəlif kateqoriyalarda kitabları axtarmaq, ö
 ## 🖼️ Ekran Görüntüləri
 
 ### Ana səhifə
-![Ana səhifə](screenshots/homepage.png)
+![Ana səhifə](https://github.com/Amil-bayt/Final/blob/main/BookBrowse/images/image.png)
 
 ### Sevimli Kitablar
 ![Sevimlilər](screenshots/favorites.png)
