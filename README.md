@@ -37,4 +37,4 @@ Bu layihə tədris məqsədli hazırlanmışdır və təkmilləşdirilməyə aç
 
 ## 💌 Email: amileliyev762@gmail.com
 
-## 🌐 GitHub: github.com/Amil-bayt
+## 🌐 GitHub: [github.com/Amil-bayt](https://github.com/Amil-bayt)
