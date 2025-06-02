@@ -1,4 +1,3 @@
-/* CSS Variables for Theme */
 :root {
     --primary: 210 100% 50%; /* #0066FF */
     --primary-hover: 210 100% 45%; /* #0052CC */
@@ -453,7 +452,8 @@ body {
     color: white;
 }
 
-/* Responsive Design */
+
+
 @media (max-width: 768px) {
     .header .container {
         flex-direction: column;
