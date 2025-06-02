@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookLibrary - University Project</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="images/image copy.png">
+    <link rel="icon" href="images/icon.png">
 </head>
 <body>
     <header class="header">
@@ -22,7 +22,7 @@
 
     <main class="main">
         <div class="container">
-            <!-- Search and Filter Section -->
+            <!-- Search and Filter -->
             <div class="search-section">
                 <input type="text" id="searchInput" class="search-input" placeholder="Search for books...">
                 <select id="categorySelect" class="category-select">
@@ -45,7 +45,7 @@
                 </select>
             </div>
 
-            <!-- Offline Indicator -->
+            <!-- offline -->
             <div class="offline-indicator" id="offlineIndicator" style="display: none;">
                 <div class="offline-content">
                     <div class="offline-icon">🔴</div>
@@ -54,7 +54,6 @@
                 </div>
             </div>
 
-            <!-- Books Section -->
             <section id="booksSection" class="section active">
                 <h2 class="section-title">Available Books</h2>
                 <div class="loading" id="loading">Loading books...</div>
@@ -62,7 +61,6 @@
                 <div class="books-grid" id="booksGrid"></div>
             </section>
 
-            <!-- Favorites Section -->
             <section id="favoritesSection" class="section">
                 <h2 class="section-title">My Favorites</h2>
                 <div class="empty-state" id="emptyFavorites">
@@ -71,7 +69,6 @@
                 <div class="books-grid" id="favoritesGrid"></div>
             </section>
 
-            <!-- Reading List Section -->
             <section id="readinglistSection" class="section">
                 <h2 class="section-title">My Reading List</h2>
                 <div class="empty-state" id="emptyReadingList">
@@ -82,7 +79,7 @@
         </div>
     </main>
 
-    <!-- Keyboard Shortcuts Help -->
+    <!-- keyboard shortcuts -->
     <div class="shortcuts-help" id="shortcutsHelp" style="display: none;">
         <div class="shortcuts-content">
             <h3>Keyboard Shortcuts</h3>
