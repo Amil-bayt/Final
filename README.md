@@ -19,7 +19,7 @@ Bu layihə istifadəçilərə müxtəlif kateqoriyalarda kitabları axtarmaq, ö
 ### Sevimli Kitablar
 ![Sevimlilər](https://github.com/Amil-bayt/Final/blob/main/BookBrowse/images/favorites.jpg)
 
-### Qaranlıq Tema
+### Klaviatura Qısayolları
 ![Qaranlıq rejim](screenshots/dark-theme.png)
 
 ## 🛠️ Texnologiyalar
